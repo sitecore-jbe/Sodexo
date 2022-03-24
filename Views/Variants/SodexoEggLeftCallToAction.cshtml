@@ -31,9 +31,7 @@
                                         <br>
                                         <span style="color: #283897;">@Html.Sitecore().Field("Call To Action 1 SubTitle")</span>
                                     </p>
-                                    <a class="btn btn-red d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://moncompte.sodexopass.fr/login" type="button"> Consulter    </a>
-                                    <div>
-                                    </div>
+                                    @Html.Sitecore().Field("Call To Action 1 Link", Model.Item, new { @class = "btn btn-red d-block mx-auto mx-md-0 d-block d-md-inline-block" })
                                 </div>
                                 <div class="button  text-center">
                                     @Html.Sitecore().Field("Call To Action 2 Image")"
@@ -42,7 +40,6 @@
                                         <br>
                                         <span style="color: #283897;">@Html.Sitecore().Field("Call To Action 2 SubTitle")</span>
                                     </p>
-                                    @*<a class="btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://play.google.com/store/apps/details?id=com.guerdons.passresto&amp;hl=fr" type="button"> Ouvrir    </a>*@
                                     @Html.Sitecore().Field("Call To Action 2 Link", Model.Item, new { @class = "btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" })
                                     <div>
                                         <a href="https://apps.apple.com/fr/app/passrestaurant-la-carte-ch%C3%A8que-restaurant-sodexo/id928011571">
