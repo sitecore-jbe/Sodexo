@@ -42,7 +42,8 @@
                                         <br>
                                         <span style="color: #283897;">@Html.Sitecore().Field("Call To Action 2 SubTitle")</span>
                                     </p>
-                                    <a class="btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://play.google.com/store/apps/details?id=com.guerdons.passresto&amp;hl=fr" type="button"> Ouvrir    </a>
+                                    @*<a class="btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://play.google.com/store/apps/details?id=com.guerdons.passresto&amp;hl=fr" type="button"> Ouvrir    </a>*@
+                                    @Html.Sitecore().Field("Call To Action 2 Link", Model.Item, new { @class = "btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" })
                                     <div>
                                         <a href="https://apps.apple.com/fr/app/passrestaurant-la-carte-ch%C3%A8que-restaurant-sodexo/id928011571">
                                             <img alt="Badge Apple Store" class="store-badge d-block d-lg-inline mt-3 mx-auto mx-lg-0 lazyloaded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAAgCAMAAACsJD/tAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUxpcQAAAGdnZ////4SEhKampqampqysrKWlpaCgoCAgIA8PD7+/v0BAQH9/f5+fn9/f32BgYDAwMHBwcO/v75CQkFNTU09PT8/Pz6+vr3rYKtgAAAAKdFJOUwD////Xe58eVbmJQXgNAAACjklEQVRIx7WWi3rqIAyAi2zHmYSESxH6/i96ErTWHXVn+7412loQfnIhKdM0ffx548NvC/PpYzJ5T+j2EDy/K/14cHvJWfX/g7vh3Wma3vaju8Nx4h3x5+P04HrYghPCv55LL55NAvwfD+S38Uuh7BB1RbSPTqdxHxfSVRlrOSTkMLq/xEdPG55dFlikVKS8QOfFEVBllFr0t5syzKPf5dhYlhSqhC/wwc/wGc/ZUShcBMSJo5Zcd4WlBLXEtaILWr/ZpdpzVXmFV8NCBbiZF6RJSzUIxrykCz5IpixBQg1RddbWigfDlxJeaJ/Jeyo8e9+vBmBKOjYVdE3jhsFlfcjaTMoY/2nr0q+6hAyYx+hneFDuKv33NyZt9AjfqinwAzxudC/3G+lFzQhd1eBv48MdPtxvpOcI8BQy60iO38LnO/yWjkLV0qAFTE190TKkdslYb+GsKSyz1vPLHsCELdszfO2cLbFiCmYLxdgtIrHP0XccZi0DwpqGGeJMflGL+lzC3MmXx9DGO/7qkObBmXfIN91Zi4u6RLhMZnW9gBvOkYjWDRa0qFed8QHP/tE9SweQWfG2UyWOuZeber9J1HGGny1Ru4A2dQlmGZ77jMf5YWfCGumBr7OLxqGb78wgww9riW54rUOPWVs2/NV3Gj8AUN3IrI1kXwVUt9qvbcPbgjrM8Gi+hIRPas4tsZa1Y+ipJJojk06OUTiOmgfaUywkxVdoXkqPYHhXZkkxPitpyBIQk/CaSTI2oRYwokaLNiInkotfQXq02ouir4S2UNV3wqjFiegGePa2eiKruyP/uOaUffF7nhTKcTrteM550xNm2o3e7JT5ft7pjNnexxn2ePr9A/LhUK4n5F3lLxEBMeYPc9LKAAAAAElFTkSuQmCC">
@@ -57,8 +58,7 @@
                         </section>
                         <section class="col-md-6">
                             <div class="my-5 d-none d-sm-flex align-items-center justify-content-center">
-                                @Html.Sitecore().Field("Image")
-                                @*<img alt="" class="img-fluid mx-auto lazyloaded" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/Illustration-1.png">*@
+                                @Html.Sitecore().Field("Image", Model.Item, new { @class = "img-fluid mx-auto lazyloaded" })
                             </div>
                             <div class="d-buttons mt-2 mb-4 justify-content-end" style=""> </div>
                             <div class="clearfix"></div>
