@@ -152,28 +152,6 @@
         })();
     </script>
     <script defer="" async="" type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // NIJI FEAT/AP-2972 generation of URL with simulator datas
-            // created in /simulators/src/views/France/France.jsx
-            $(document).on('click', '#btnUrlDevis', function (event) {
-                var href = $(this).attr('href');
-                window.location = href;
-            });
-            // NIJI FEAT/AP-3013 generation of URL with simulator datas
-            // Populate a specific hidden hubspot form sendPdf when clicking on Ok button
-            // Email and datas simultor in front page are sent to Hubspot as lead
-            $(document).on('click', '#mail-pdf-form :submit', function (event) {
-                var email_simul = $('#send_pdf').val();
-                var simUrl = sessionStorage.getItem("urlSim");
-                var simPrint = simUrl.replace('pdf.php', 'print/index.php');
-                $('input[name="email"]').val(email_simul).change();
-                $('input[name="lien_du_simulateur"]').val(simPrint).change();
-                $('#hsForm_a07de814-a0a7-4f59-9aeb-2c0f2754db69 input[type=submit]').click();
-                sessionStorage.removeItem("urlSim");
-            });
-        });
-    </script>
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.sodexo.fr/app/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
     <noscript>
         <style type="text/css">
