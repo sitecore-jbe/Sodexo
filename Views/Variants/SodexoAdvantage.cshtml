@@ -12,7 +12,7 @@
 @if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
 {
     <div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoAdvantage", Model.Attributes)>
-        <section class="col-sm-6 col-md-4 pb-3">
+        <section>
             <div class="my-3 d-flex align-items-center justify-content-center">
                 @Html.Sitecore().Field("Image", Model.Item, new { @class = "img-fluid mx-auto lazyloaded" })
             </div>
