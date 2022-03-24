@@ -1,0 +1,79 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Fields
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@using Sitecore.Mvc.Helpers
+@using Sitecore.Mvc
+
+
+@model Sitecore.XA.Foundation.Variants.Abstractions.Models.VariantsRenderingModel
+
+@if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
+{
+    <div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoEggRightCallToAction", Model.Attributes)>
+        <div class="columns py-5" style="color: #2A295C;">
+            <div class="container egg-orange-1">
+                <div class="row">
+                    <div class="col-12 d-md-flex align-items-start">
+                        <section class="col-md-6">
+                            <div class="my-5 d-none d-sm-flex align-items-center justify-content-center">
+                                @Html.Sitecore().Field("Image", Model.Item, new { @class = "img-fluid mx-auto lazyloaded" })
+                             </div>
+                            <div class="d-buttons mt-2 mb-4 justify-content-start " style="">
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </section>
+                        <section class="col-md-6">
+                            <div class="egg right egg-orange-1" style="background-image: url('https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/themes/sodexo-child/src/assets/images/egg-orange-1.svg?frz-v=189')"></div>
+                            <div class="filigrane right mt-3 d-none d-lg-block">@Html.Sitecore().Field("Audience Name")</div>
+                            <div class="my-3">
+                                <h2 style="text-align: right;">
+                                    <strong>@Html.Sitecore().Field("First Title")</strong>
+                                    <br>@Html.Sitecore().Field("Second Title")
+                                </h2>
+                            </div>
+                            <div class="mt-3 mb-4">
+                                <p style="text-align: right;">@Html.Sitecore().Field("Intro")</p>
+                            </div>
+                            <div class="d-buttons mt-2 mb-4 justify-content-end" style="">
+                                <div class="button text-center">
+                                    @Html.Sitecore().Field("Call To Action 1 Image")
+                                    <p style="text-align: center;">
+                                        @Html.Sitecore().Field("Call To Action 1 Title")<br> <strong>@Html.Sitecore().Field("Call To Action 1 SubTitle")</strong>
+                                    </p>
+                                    @Html.Sitecore().Field("Call To Action 1 Link", Model.Item, new { @class = "btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" })
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="button ml-xs-4 text-center">
+                                    @Html.Sitecore().Field("Call To Action 2 Image")
+                                    <p style="text-align: center;">@Html.Sitecore().Field("Call To Action 2 Title")<br> <strong>@Html.Sitecore().Field("Call To Action 2 SubTitle")</strong></p>
+                                    @Html.Sitecore().Field("Call To Action 2 Link", Model.Item, new { @class = "btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" })
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-content">
+            @if (Model.DataSourceItem == null)
+            {
+                @Model.MessageIsEmpty
+            }
+            else
+            {
+                foreach (BaseVariantField variantField in Model.VariantFields)
+                {
+                    @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams, Model)
+                }
+            }
+        </div>
+    </div>
+}
