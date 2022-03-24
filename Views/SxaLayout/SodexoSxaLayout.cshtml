@@ -13,8 +13,7 @@
 
 @{
     AssetLinks assetLinks = AssetLinksGenerator.GenerateLinks(new ThemesProvider());
-    HTMLIncludes includes = ServiceLocator.ServiceProvider.GetService<IHTMLIncludesService>
-    ().GetHTMLIncludes();
+    HTMLIncludes includes = ServiceLocator.ServiceProvider.GetService<IHTMLIncludesService>().GetHTMLIncludes();
 }
 
 <!DOCTYPE html>
