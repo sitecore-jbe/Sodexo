@@ -1,0 +1,80 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Fields
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@model Sitecore.XA.Foundation.Variants.Abstractions.Models.VariantsRenderingModel
+
+@if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
+{
+    <div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoEggLeftCallToAction", Model.Attributes)>
+        <div class="columns py-5" style="color: #2A295C;">
+            <div class="container egg-green-1" id="utilisateurs-homepage">
+                <div class="row">
+                    <div class="col-12 d-md-flex align-items-start">
+                        <section class="col-md-6">
+                            <div class="egg left egg-green-1" style="background-image: url('https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/themes/sodexo-child/src/assets/images/egg-green-1.svg?frz-v=189')"></div>
+                            <div class="filigrane left mt-3 d-none d-lg-block"> UTILISATEURS                            </div>
+                            <div class="my-3"> <h2><strong>Profitez</strong><br> de solutions innovantes</h2> </div>
+                            <div class="mt-3 mb-4">
+                                <p>Des expériences déjeuner et cadeau plus riches et plus responsables. Retrouvez <strong>vos</strong> e<strong>nseignes préférées</strong>, commandez facilement et rapidement sur nos sites web et nos <strong>plateformes de livraison</strong> partenaires. Faites-vous plaisir avec nos bons plans et promotions !</p>
+                            </div>
+                            <div class="d-buttons mt-2 mb-4 justify-content-start " style="">
+                                <div class="button mr-xs-4 text-center">
+                                    <img alt="" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/61952de57341d-61952de57341eProperty-116x16-Property-3screen@2x.png.png">
+                                    <p style="text-align: center;">
+                                        <span style="color: #283897;"><strong>Mon compte</strong></span>
+                                        <br>
+                                        <span style="color: #283897;">Pass Restaurant</span>
+                                    </p>
+                                    <a class="btn btn-red d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://moncompte.sodexopass.fr/login" type="button"> Consulter    </a>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="button  text-center">
+                                    <img alt="" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/61952dda3ccd5-61952dda3ccd6Property-116x16-Property-3mobile@2x.png.png">
+                                    <p style="text-align: center;">
+                                        <span style="color: #283897;"><strong>L’application</strong></span>
+                                        <br>
+                                        <span style="color: #283897;">Pass Restaurant</span>
+                                    </p>
+                                    <a class="btn btn-white d-block mx-auto mx-md-0 d-block d-md-inline-block" href="https://play.google.com/store/apps/details?id=com.guerdons.passresto&amp;hl=fr" type="button"> Ouvrir    </a>
+                                    <div>
+                                        <a href="https://apps.apple.com/fr/app/passrestaurant-la-carte-ch%C3%A8que-restaurant-sodexo/id928011571">
+                                            <img alt="Badge Apple Store" class="store-badge d-block d-lg-inline mt-3 mx-auto mx-lg-0 lazyloaded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAAgCAMAAACsJD/tAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUxpcQAAAGdnZ////4SEhKampqampqysrKWlpaCgoCAgIA8PD7+/v0BAQH9/f5+fn9/f32BgYDAwMHBwcO/v75CQkFNTU09PT8/Pz6+vr3rYKtgAAAAKdFJOUwD////Xe58eVbmJQXgNAAACjklEQVRIx7WWi3rqIAyAi2zHmYSESxH6/i96ErTWHXVn+7412loQfnIhKdM0ffx548NvC/PpYzJ5T+j2EDy/K/14cHvJWfX/g7vh3Wma3vaju8Nx4h3x5+P04HrYghPCv55LL55NAvwfD+S38Uuh7BB1RbSPTqdxHxfSVRlrOSTkMLq/xEdPG55dFlikVKS8QOfFEVBllFr0t5syzKPf5dhYlhSqhC/wwc/wGc/ZUShcBMSJo5Zcd4WlBLXEtaILWr/ZpdpzVXmFV8NCBbiZF6RJSzUIxrykCz5IpixBQg1RddbWigfDlxJeaJ/Jeyo8e9+vBmBKOjYVdE3jhsFlfcjaTMoY/2nr0q+6hAyYx+hneFDuKv33NyZt9AjfqinwAzxudC/3G+lFzQhd1eBv48MdPtxvpOcI8BQy60iO38LnO/yWjkLV0qAFTE190TKkdslYb+GsKSyz1vPLHsCELdszfO2cLbFiCmYLxdgtIrHP0XccZi0DwpqGGeJMflGL+lzC3MmXx9DGO/7qkObBmXfIN91Zi4u6RLhMZnW9gBvOkYjWDRa0qFed8QHP/tE9SweQWfG2UyWOuZeber9J1HGGny1Ru4A2dQlmGZ77jMf5YWfCGumBr7OLxqGb78wgww9riW54rUOPWVs2/NV3Gj8AUN3IrI1kXwVUt9qvbcPbgjrM8Gi+hIRPas4tsZa1Y+ipJJojk06OUTiOmgfaUywkxVdoXkqPYHhXZkkxPitpyBIQk/CaSTI2oRYwokaLNiInkotfQXq02ouir4S2UNV3wqjFiegGePa2eiKruyP/uOaUffF7nhTKcTrteM550xNm2o3e7JT5ft7pjNnexxn2ePr9A/LhUK4n5F3lLxEBMeYPc9LKAAAAAElFTkSuQmCC">
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.guerdons.passresto&amp;hl=fr">
+                                            <img alt="Badge Google Play" class="store-badge d-block d-lg-inline mt-2 mt-lg-3 mx-auto mx-lg-0 lazyloaded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAAgCAMAAAAmC6asAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADtUExURUxpcWNjY4yMjKenp6SkpH9/f4KCgnZ2dqOjo5iYmG9vb6WlpZeXlwAAAGdnZ////yAgIGBgYN/f30BAQBAQEJ+fn7+/v4CAgO/v7wHwdlBQUHBwcADS/wA2PgDX/8/PzwDL/wDd/zAwMPo2R6+vr//JAADG/5CQkP/SAAHVzA0cChEHBx8fH+8uTN0zVI+PjwDA/+o+USu43n9/f+/BBwC5/y6n3T0OGV9fX967BjLoYf+9AwiMSQ1QLgTWbGVUBADA5QDsfv9TNw23YWsVIZ+KAH9nCPtTN4BkALMoMjCkwrknNwg3QKsePaYfOOSdIgEAAAANdFJOUwDvx581z9/fHL/vgJ8PNKZaAAAC4UlEQVRIx72WCVcaMRDHV2tbbBsn94bEGl1WV6uCN1qPamvv4/t/nM6AnC608IQ8eEPyhv3NzH+STZIsLS+szHq8elNJksrCLpv90C8qySKby9CvkzAfEnuerMyJ9LJLur4ekfaxNVoZI4wxinmPhjPdsA2mAlNqctKvnZtP78o8TGCCi8A1j1yzVHGLJhcsNAQoISYnvV3dqVavSliS+TQIi4lYnKWqZegbRWqnIxHq5uoxSWfKUk79JKkZR0yI05HWEVW9GZZLyNR6zMn3k0KkRcGmIq2trm8RqjosF1eYgFKccZpolnUXW59pSB1UqVxP1+Vt0kEb9f7L7EkHt3cIOtm8+NC/o3Lb4KOe4HtbigshPDqKbDwJhULU6e0dgja3ty86JTx3Ls8l+BEkaXrNA1ICnDNI/0WipE5Pf5xcEmn780OgYEj2UaBBEu10p/+TdHb48bI/Jyv7+/ChnrpnWiTeIylQRNJ6JGmDyrd1cHZYqyHqpKNTO0COQ2MdARo4sQA5nn1k5B6SggOZdUjHwCElF8lNjs4ylJMIVKt9/dZ9O3KgzYnlx39CoQKkWkalpGVGeiUBSR6KrHCaSNZGjAxSZckF08M1XkZabYO+972FtSuoJErZWDj8VTgPGT00oxAUkYqojLPUc2BMga2IsOMYI7BoejIOko7q+/u1n82B+uauFZSWxpBiKQjQhBDUjRmRDLg06+rEiISpixywrK2whkkbawSq3w8pyaXEMLPoOD2bS8tJq1wyZ0kUJAUsEg8DpDySjFgQcnpMQlD9/vH1hUtwbckNSCc5piWd8yxzDuWjjogQab2P5NEFq0cVKCEh6E/5NUmlqdDtHy3L09AyIXjYw6MX32Dt9Yfjgk7j1NPMyJIuP6r/bk50kFEPGznWhTtRco9oNic8MpXDovqxLt0WHyBNPrB6fLxHlrEnIU1631ue0x32WbJ0Pg/QLt7Lk6XFldmPZQTNbfwFsX/Sl2+4Y4cAAAAASUVORK5CYII=">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </section>
+                        <section class="col-md-6">
+                            <div class="my-5 d-none d-sm-flex align-items-center justify-content-center">
+                                <img alt="" class="img-fluid mx-auto lazyloaded" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/Illustration-1.png">
+                            </div>
+                            <div class="d-buttons mt-2 mb-4 justify-content-end" style=""> </div>
+                            <div class="clearfix"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-content">
+            @if (Model.DataSourceItem == null)
+            {
+                @Model.MessageIsEmpty
+            }
+            else
+            {
+                foreach (BaseVariantField variantField in Model.VariantFields)
+                {
+                    @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams, Model)
+                }
+            }
+        </div>
+    </div>
+}
