@@ -11,7 +11,7 @@
 
 @if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
 {
-    <div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoEggLeftCallToAction", Model.Attributes)>
+    @*<div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoEggLeftCallToAction", Model.Attributes)>*@
         <div class="columns py-5" style="color: #2A295C;">
             <div class="container egg-green-1" id="utilisateurs-homepage">
                 <div class="row">
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="component-content">
+        @*<div class="component-content">
             @if (Model.DataSourceItem == null)
             {
                 @Model.MessageIsEmpty
@@ -77,6 +77,6 @@
                     @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams, Model)
                 }
             }
-        </div>
-    </div>
+        </div>*@
+    @*</div>*@
 }

@@ -11,7 +11,7 @@
 
 @if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
 {
-    <div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoAdvantage", Model.Attributes)>
+    @*<div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoAdvantage", Model.Attributes)>*@
         <section>
             <div class="my-3 d-flex align-items-center justify-content-center">
                 @Html.Sitecore().Field("Image", Model.Item, new { @class = "img-fluid mx-auto lazyloaded" })
@@ -26,7 +26,7 @@
             </div>
         </section>
 
-        <div class="component-content">
+        @*<div class="component-content">
             @if (Model.DataSourceItem == null)
             {
                 @Model.MessageIsEmpty
@@ -38,6 +38,6 @@
                     @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams, Model)
                 }
             }
-        </div>
-    </div>
+        </div>*@
+    @*</div>*@
 }
