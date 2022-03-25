@@ -15,8 +15,8 @@
 
     <div class="img-fluid div-bg py-5" id="" style="background-image: url('https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2022/01/MicrosoftTeams-image-40.png'); margin-bottom: 380px">
         <div class="container py-5">
-            <h1 class="main-title mt-3" style="color: #ffffff">La carte Sodexo Pass Restaurant </h1>
-            <h2 class="main-title" style="color: #ffffff">Donner du sens à votre déjeuner </h2>
+            <h1 class="main-title mt-3" style="color: #ffffff">@Html.Sitecore().Field("Title")</h1>
+            <h2 class="main-title" style="color: #ffffff">@Html.Sitecore().Field("SubTitle")</h2>
             <div class="d-md-flex mt-5 mb-5">
                 <a class="btn btn-white mx-auto mx-md-0 mb-3 mb-md-0 d-md-block d-inline-block" href="https://www.sodexo.fr/carte-pass-restaurant/" type="button"> En savoir plus                            </a>
                 <a class="btn btn-red mx-auto mx-md-4 d-md-block d-inline-block" href="https://www.sodexo.fr/titres-restaurant/demande-devis-pass-restaurant/" type="button"> Demander un tarif                            </a>
@@ -25,25 +25,25 @@
         </div>
         <div class="insert-slider d-md-flex flex-wrap align-items-center justify-content-center w-100">
             <div class="insert px-md-0 py-md-2 mx-3 mb-3 mb-md-0 col-md-3 align-self-stretch text-center" style="color: #55547d" tabindex="-1" role="option" aria-describedby="slick-slide00">
-                <h3 class="mt-3 mb-3"> Entreprises                                </h3>
+                <h3 class="mt-3 mb-3">@Html.Sitecore().Field("Call To Action 1 Title")</h3>
                 <div class="mt-3 mb-4 d-flex align-items-center justify-content-center" style="background-color: #8282dc">
                     <img alt="" class="pt-2 pb-1 img-fluid mx-auto lazyloaded" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/Frame-1211-13.png">
                 </div>
-                <a href="https://www.sodexo.fr/titres-restaurant/" class="d-block my-3" onmouseover="this.style.color='#8282dc'" onmouseout="this.style.color='#55547d'" tabindex="-1" style="color: rgb(85, 84, 125);"> Découvrir les solutions restauration                                </a>
-                <a href="https://www.sodexo.fr/titres-cadeaux/" class="d-block my-3" onmouseover="this.style.color='#8282dc'" onmouseout="this.style.color='#55547d'" tabindex="-1"> Découvrir les solutions cadeau                                </a>
-                <a href="https://www.sodexo.fr/motivation-entreprise/" class="d-block my-3" onmouseover="this.style.color='#8282dc'" onmouseout="this.style.color='#55547d'" tabindex="-1"> Découvrir les solutions incentive                                </a>
+                @Html.Sitecore().Field("Call To Action 1 Link 1", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#8282dc'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1", @style = "color: rgb(85, 84, 125);" })
+                @Html.Sitecore().Field("Call To Action 1 Link 2", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#8282dc'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1" })
+                @Html.Sitecore().Field("Call To Action 1 Link 3", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#8282dc'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1" })
             </div>
             <div class="insert px-md-0 py-md-2 mx-3 mb-3 mb-md-0 col-md-3 align-self-stretch text-center" style="color: #55547d" tabindex="-1" role="option" aria-describedby="slick-slide01">
-                <h3 class="mt-3 mb-3"> Utilisateurs                                </h3>
+                <h3 class="mt-3 mb-3">@Html.Sitecore().Field("Call To Action 2 Title")</h3>
                 <div class="mt-3 mb-4 d-flex align-items-center justify-content-center" style="background-color: #3cdcc8">
                     <img alt="" class="pt-2 pb-1 img-fluid mx-auto lazyloaded" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/Frame-1211-15.png">
                 </div>
-                <a href="https://www.sodexo.fr/geolocalisation-cheques-cadeaux/" class="d-block my-3" onmouseover="this.style.color='#3cdcc8'" onmouseout="this.style.color='#55547d'" tabindex="-1"> Utiliser mes titres cadeau                                </a>
-                <a href="https://www.sodexo.fr/geolocalisation-cheque-restaurant/" class="d-block my-3" onmouseover="this.style.color='#3cdcc8'" onmouseout="this.style.color='#55547d'" tabindex="-1"> Utiliser mes titres restaurant                                </a>
-                <a href="https://apps.apple.com/fr/app/passrestaurant-by-sodexo/id928011571" class="d-block my-3" onmouseover="this.style.color='#3cdcc8'" onmouseout="this.style.color='#55547d'" tabindex="-1"> Utiliser l’application restaurant                                </a>
-            </div>
+                @Html.Sitecore().Field("Call To Action 2 Link 1", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#3cdcc8'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1" })
+                @Html.Sitecore().Field("Call To Action 2 Link 2", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#3cdcc8'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1" })
+                @Html.Sitecore().Field("Call To Action 2 Link 3", Model.Item, new { @class = "d-block my-3", @onmouseover = "this.style.color='#3cdcc8'", @onmouseout = "this.style.color='#55547d'", @tabindex = "-1" })
+             </div>
             <div class="insert px-md-0 py-md-2 mx-3 mb-3 mb-md-0 col-md-3 align-self-stretch text-center" style="color: #55547d" tabindex="-1" role="option" aria-describedby="slick-slide02">
-                <h3 class="mt-3 mb-3"> Commerçants                                </h3>
+                <h3 class="mt-3 mb-3">@Html.Sitecore().Field("Call To Action 3 Title")</h3>
                 <div class="mt-3 mb-4 d-flex align-items-center justify-content-center" style="background-color: #ff9673">
                     <img alt="" class="pt-2 pb-1 img-fluid mx-auto lazyloaded" src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/11/Frame-1211-14.png">
                 </div>
