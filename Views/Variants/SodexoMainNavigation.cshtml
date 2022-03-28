@@ -1,0 +1,75 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Fields
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@using Sitecore.Mvc.Helpers
+@using Sitecore.Mvc
+
+
+@model Sitecore.XA.Foundation.Variants.Abstractions.Models.VariantsRenderingModel
+
+@if (Model.DataSourceItem != null || Html.Sxa().IsEdit)
+{
+    @*<div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "SodexoMainNavigation" , Model.Attributes)>
+    *@
+
+    <nav id="MenuTop" class="navbar">
+        <div class="top-menu-left-section">
+            <h1>
+                <a class="navbar-brand" rel="home" href="https://www.sodexo.fr/" title="Sodexo">
+                    <img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2022/01/Sodexo-_-color.png" alt="Sodexo" width="185" height="65">
+                </a>
+            </h1>
+        </div>
+        <div id="top-nav" class="menu-top-nav-container">
+            <ul id="menu-top-nav" class="navbar-nav">
+                <li id="menu-item-6065">
+                    <img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2019/02/sa.fr-geolocalisation-autour-de-vous_40x40.png" alt="" width="20" height="20">
+                    <a href="https://www.sodexo.fr/utilisateurs/">
+                        <span>Où utiliser les titres</span>
+                    </a>
+                </li>
+                <li id="menu-item-10719">
+                    <img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/06/60d04fda4729b-60d04fda4729cProperty-132x32-Property-2pen@2x.png.png" alt="" width="20" height="20">
+                    <a href="https://www.mieux-lemag.fr/">
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li id="menu-item-8933">
+                    <img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/06/60d05f365557f-60d05f3655580Property-124x24-Property-2globe@2x.png.png" alt="" width="20" height="20"><a href="https://fr.sodexo.com/home.html"><span>Le groupe Sodexo</span></a>
+                </li>
+                <li id="menu-item-10558"><img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/04/picto_Plan-de-travail-1-copie-2.png" alt="" width="20" height="20"><a href="https://www.sodexo.fr/questions-frequemment-posees/"><span>Besoin d'aide ?</span></a></li>
+                <li id="menu-item-10722"><img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/06/60d04fdf89bd3-60d04fdf89bd4Property-132x32-Property-3phone@2x.png.png" alt="" width="20" height="20"><a href="https://www.sodexo.fr/contact-sodexo-pass-france/"><span><b>Nous contacter</b></span></a></li>
+                <li id="menu-item-11"><img class="di " src="https://www.sodexo.fr/fstrz/r/s/aziest1hxq182.blob.core.windows.net/fr-uploads/2021/06/60d060a509c89-60d060a509c8aProperty-124x24-Property-2globe@2x.png.png" alt="" width="20" height="20"><a href="https://www.sodexo.fr/titres-restaurant/demande-devis-pass-restaurant/"><span> <font style="color:red;"><b>OBTENIR UN DEVIS</b></font></span></a></li>
+            </ul>
+        </div>
+        <div class="top-menu-right-section">
+            <div class="top-menu-login-item hidden-md-down">
+                <a title="Login" href="https://www.sodexo.fr/login/" onclick="dataLayer.push({'event': 'click-login'});" class="btn-sodexo btn-sodexo-white icon-person">Login</a>
+            </div>
+            <div class="burger">
+                <button class="soxo-hamburger collapsed" type="button" data-toggle="collapse" data-target="#sideNav" aria-controls="sideNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>toggle menu</span>
+                </button>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+    @*<div class="component-content">
+        @if (Model.DataSourceItem == null)
+        {
+        @Model.MessageIsEmpty
+        }
+        else
+        {
+        foreach (BaseVariantField variantField in Model.VariantFields)
+        {
+        @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams, Model)
+        }
+        }
+    </div>*@
+    @*
+</div>*@
+}
