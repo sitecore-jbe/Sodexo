@@ -13,7 +13,9 @@ https://www.sodexo.fr/app/themes/sodexo-master/dist/styles/main.min.css
     src: url(https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.eot?frz-v=189);
     src: url(https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.eot?frz-v=189#iefix-3p8lp4) format("embedded-opentype"),url(https://www.sodexo.fr/fstrz/r/s/c/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.ttf.woff2?frz-v=189) format("woff2"),url(https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.woff?frz-v=189) format("woff"),url(https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.ttf?frz-v=189) format("truetype"),url(https://www.sodexo.fr/fstrz/r/s/www.sodexo.fr/app/plugins/dlbi-sodexo-icon-picker/assets/fonts/ip-soxo-icons/fonts/ip-soxo-icons.svg?frz-v=189#ip-soxo-icons) format("svg")
 }
-
+.navigation{
+    padding-right:100px;
+}
 #burger-menu li[class*=ip-soxo-icons-] > a::before, #menu-top-nav li[class*=ip-soxo-icons-] > a::before, #navbar-combined .navbar-top-menu-bar .menu-top-menu-affiliate-bar-container ul.top-menu-main > li[class*=ip-soxo-icons-] > a::before, #navbar-combined .navbar-top-menu-bar .menu-top-menu-bar-container ul.top-menu-main > li[class*=ip-soxo-icons-] > a::before, .footer-menu-main li[class*=ip-soxo-icons-] > a::before, .top_menu .top-menu--tabs_list li a[class*=ip-soxo-icons-]::after {
     font-family: ip-soxo-icons !important;
     -webkit-font-smoothing: antialiased;
